@@ -1,0 +1,9 @@
+
+‚
+java:S1319"gThe type of "adjList" should be an interface such as "List" rather than the implementation "ArrayList".(¯Áîûûÿÿÿÿ
+‚
+java:S1319"gThe type of "adjList" should be an interface such as "List" rather than the implementation "ArrayList".(­óŞ´úÿÿÿÿ
+k
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÄöÃùÿÿÿÿ
+S	java:S106D"9Replace this use of System.out or System.err by a logger.(´Ø•Éıÿÿÿÿ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ

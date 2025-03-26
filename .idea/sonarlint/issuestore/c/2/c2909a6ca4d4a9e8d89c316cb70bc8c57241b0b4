@@ -1,0 +1,14 @@
+
+E
+java:S3740;"/Provide the parametrized type for this generic.(Ú®¼ç
+E
+java:S3740<"/Provide the parametrized type for this generic.(¥ìÝ¤
+l
+java:S1104"QMake value a static final constant or non-public and provide accessors if needed.(‚¯¥ùÿÿÿÿ
+f
+java:S1104"PMake left a static final constant or non-public and provide accessors if needed.(ó÷ÔÄ
+g
+java:S1104"QMake right a static final constant or non-public and provide accessors if needed.(Ö¢è¥
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(Ú®¼ç
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(¥ìÝ¤
+N	java:S106="9Replace this use of System.out or System.err by a logger.(¤ñŽ

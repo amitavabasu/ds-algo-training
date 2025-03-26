@@ -1,0 +1,9 @@
+
+W
+java:S2184	"BCast one of the operands of this division operation to a "double".(ÝúÖ 
+;
+java:S2185	"&Remove this silly call to "Math.floor"(ÝúÖ 
+o
+java:S3012""YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Þß¸ 
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(×Æáî
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(‰ÁŽëøÿÿÿÿ

@@ -1,0 +1,19 @@
+
+X
+java:S2259K"BA "NullPointerException" could be thrown; "tail" is nullable here.(ªØ©©
+b
+java:S2259~"L"NullPointerException" will be thrown when invoking method "printCycleLL()".(¾î×Ï
+M
+java:S2589f"7Remove this expression which always evaluates to "true"(áß½¯
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÆÜÎºûÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Âû¯Ğüÿÿÿÿ
+S
+java:S1854""8Remove this useless assignment to local variable "prev".(¤î–Óúÿÿÿÿ
+D
+java:S1481")Remove this unused "prev" local variable.(ÍÚ›öüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ëæİúşÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(‚®èşÿÿÿÿ
+N	java:S106m"9Replace this use of System.out or System.err by a logger.(­Ö¿Å
+P	java:S125{"<This block of commented-out lines of code should be removed.(Ûşq
+N	java:S106"9Replace this use of System.out or System.err by a logger.(™‚ƒÈ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(êİ 

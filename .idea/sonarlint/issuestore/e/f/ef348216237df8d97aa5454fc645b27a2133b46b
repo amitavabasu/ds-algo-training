@@ -1,0 +1,13 @@
+
+m	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(Ì‚ˆÌ
+J
+java:S1066;"/Merge this if statement with the enclosing one.(å¾£›ıÿÿÿÿ
+D
+java:S1066>"/Merge this if statement with the enclosing one.(¦¬«*
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(Û€øÍ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
+S	java:S106N"9Replace this use of System.out or System.err by a logger.(·øŸşÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+H
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ

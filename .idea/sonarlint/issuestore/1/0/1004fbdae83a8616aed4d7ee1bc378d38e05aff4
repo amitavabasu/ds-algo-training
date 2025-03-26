@@ -1,0 +1,16 @@
+
+s	java:S135L"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ƒ¼±
+i
+java:S2259i"SA "NullPointerException" could be thrown; "findCycleAndForkNode()" can return null.(¬¸Íş
+X
+java:S2259A"BA "NullPointerException" could be thrown; "tail" is nullable here.(ªØ©©
+b
+java:S2259h"L"NullPointerException" will be thrown when invoking method "printCycleLL()".(¾î×Ï
+S
+java:S1854."8Remove this useless assignment to local variable "prev".(¤î–Óúÿÿÿÿ
+D
+java:S1481"")Remove this unused "prev" local variable.(ÍÚ›öüÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(Ëæİúşÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(‚®èşÿÿÿÿ
+N	java:S106i"9Replace this use of System.out or System.err by a logger.(¬¸Íş

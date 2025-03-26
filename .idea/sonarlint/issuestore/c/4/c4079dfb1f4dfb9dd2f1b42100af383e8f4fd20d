@@ -1,0 +1,10 @@
+
+E
+java:S1066"/Merge this if statement with the enclosing one.(·®³
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(æÓðÅüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(—ŽÏŒûÿÿÿÿ
+T
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(ê¬­ÿ
+V	java:S125*"<This block of commented-out lines of code should be removed.(ýÜó¶üÿÿÿÿ
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(Ø™Ù§

@@ -1,0 +1,13 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(δ…ΰ―ϋÿÿÿÿ
+
+java:S2681+"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(φ£’
+D
+java:S1905")Remove this unnecessary cast to "double".(μƒΈνώÿÿÿÿ
+D
+java:S1905/")Remove this unnecessary cast to "double".(¬΅ƒόÿÿÿÿ
+h
+java:S37765"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(²ϋ’ι
+M	java:S106X"9Replace this use of System.out or System.err by a logger.(ΫΩ`
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(ηϋ¬ªωÿÿÿÿ
+N	java:S106Z"9Replace this use of System.out or System.err by a logger.(·®Ή

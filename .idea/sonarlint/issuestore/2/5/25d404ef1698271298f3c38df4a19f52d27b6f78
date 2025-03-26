@@ -1,0 +1,15 @@
+
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëØ÷â
+f	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëØ÷â
+k	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š•ïéûÿÿÿÿ
+k	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š•ïéûÿÿÿÿ
+r	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„€Ò½üÿÿÿÿ8‚•ãú1
+m	java:S117?"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±Ã×ƒ8‚•ãú1
+7
+java:S1643"Use a StringBuilder instead.(ßŒšÒıÿÿÿÿ
+7
+java:S1643-"Use a StringBuilder instead.(¯¬Ášûÿÿÿÿ
+k
+java:S1149!"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÑÖÙƒıÿÿÿÿ
+S	java:S106B"9Replace this use of System.out or System.err by a logger.(ÈïÒİùÿÿÿÿ
+U	java:S106C"9Replace this use of System.out or System.err by a logger.(£Ìğğ8Á˜ãú1
