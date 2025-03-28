@@ -54,16 +54,19 @@ public class TopViewOfBinaryTree {
         recursiveDFS(root.right, map, index + 1);
     }
 
+    public static void printTree(Node node) {
+        if (node == null) { System.out.print("null"); return;}
+        if (node.left != null) printTree(node.left);
+        System.out.print(node.value);
+        if (node.right != null) printTree(node.right);
+    }
+
     public static void main(String[] args) {
         Node root =  buildTree();
-//        List<Node> result = generateTopBFS(root);
-//        for (Node node : result) {
-//            System.out.print(node.value + " ");
-//        }
-//        System.out.println("");
-
-        Collection<Node> rView = generateTopViewDFS(root);
-        for (Node node : rView) {
+        printTree(root);
+        System.out.println();
+        Collection<Node> topView = generateTopViewDFS(root);
+        for (Node node : topView) {
             System.out.print(node.value + " ");
         }
         System.out.println("");
