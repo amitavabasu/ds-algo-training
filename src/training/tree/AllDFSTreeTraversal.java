@@ -3,7 +3,9 @@ package training.tree;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class AllDFSTreeTraversal {
 
@@ -26,6 +28,15 @@ public class AllDFSTreeTraversal {
         root.right.right = new Node(170);
         return root;
     }
+
+    public static Node buildTree(Integer[] levelOrderData, int index) {
+            if (index >= levelOrderData.length) return null;
+            Node node = new Node(levelOrderData[index]);
+            node.left = buildTree(levelOrderData, index*2+1);
+            node.right = buildTree(levelOrderData, index*2+2);
+            return node;
+    }
+
 
     public static List<Integer> inOrder(Node root, List<Integer> result) {
         if (root == null) return Collections.emptyList();
@@ -51,6 +62,22 @@ public class AllDFSTreeTraversal {
         return result;
     }
 
+    public static List<Integer> levelOrder(Node root) {
+        if (root == null) return Collections.emptyList();
+        List<Integer> result = new ArrayList<>();
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node node = queue.remove();
+            result.add(node.value);
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+        }
+        return result;
+    }
+
+
+
 
 
 
@@ -59,6 +86,16 @@ public class AllDFSTreeTraversal {
         System.out.println("Post Order: " + Arrays.toString(postOrder(root, new ArrayList()).toArray()));
         System.out.println("Pre Order: " + Arrays.toString(preOrder(root, new ArrayList()).toArray()));
         System.out.println("In Order: " + Arrays.toString(inOrder(root, new ArrayList<>()).toArray()));
+        System.out.println("Level Order: " + Arrays.toString(levelOrder(root).toArray()));
+
+        System.out.println("-------------");
+
+        Integer[] treeDataLevelOrder = {9, 4,20, 1,6,15,170, };
+        Node rootNode = buildTree(treeDataLevelOrder, 0);
+        System.out.println("Post Order: " + Arrays.toString(postOrder(rootNode, new ArrayList()).toArray()));
+        System.out.println("Pre Order: " + Arrays.toString(preOrder(rootNode, new ArrayList()).toArray()));
+        System.out.println("In Order: " + Arrays.toString(inOrder(rootNode, new ArrayList<>()).toArray()));
+        System.out.println("Level Order: " + Arrays.toString(levelOrder(root).toArray()));
     }
 
 

@@ -104,14 +104,14 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[][] inputs = {
-                {3,4,2,1,5,8,6,7},
+                {9,8,7,6,5,4,3,2,1},
                 {8,7,6,5,4,3,2,1},
                 {1,2,3,5,4,6,7,8}
         };
 
         for(int[] input : inputs) {
             System.out.print (Arrays.toString(input) + " --> ");
-            quickSort3(input,0,input.length-1);
+            quickSort(input,0,input.length-1);
             System.out.println(Arrays.toString(input) + ".");
         }
     }
