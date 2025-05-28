@@ -40,7 +40,7 @@ public class DepthAndWidthOfABinaryTree {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            if (width < queue.size()) width = queue.size();
+            if (width < queue.size()) width = queue.size();//<-- this may not be correct
             Node node = queue.remove();
             if (node.left != null) queue.add(node.left);
             if (node.right != null) queue.add(node.right);
