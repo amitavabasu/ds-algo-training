@@ -39,13 +39,11 @@ public class FindAllNodesInBetweenTwoValues {
 
     public static void findBetween(Node node, int start, int end) {
         if (node == null) return;
-        if (start < node.val && end < node.val) findBetween(node.left, start, end);
-        if (start > node.val && end > node.val) findBetween(node.right, start, end);
         if (node.val >= start && node.val <= end) {
             System.out.print(node.val + " ");
-            if (start < node.val) findBetween(node.left, start, end);
-            if (end > node.val) findBetween(node.right, start, end);
         }
+        if (start < node.val && node.left != null) findBetween(node.left, start, end);
+        if (end > node.val && node.right != null) findBetween(node.right, start, end);
     }
 
     public static void main(String[] args) {
@@ -55,7 +53,7 @@ public class FindAllNodesInBetweenTwoValues {
         Node root = buildBSTFromSortedArray(list.stream().mapToInt(Integer::intValue).toArray(), 0, array.length-1);
         printTree(root);
         System.out.println();
-        findBetween(root, 10, 17);
+        findBetween(root, 10, 20);
         System.out.println();
     }
 
