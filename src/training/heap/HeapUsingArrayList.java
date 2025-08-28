@@ -27,20 +27,15 @@ public class HeapUsingArrayList {
         }
 
         public int get() {
-            int valToReturn = values.get(0);//initialize the value to return as the first (0-th) value of the list. do not remove it from the list, keep the value.
-            int itemToRemove = values.remove(values.size() - 1);//remove the last value of the list to put as the just removed first value at the list.
-            if(values.size() > 0) {//if the list size is grater than 0 this means the last value moved was the only value, so nothing needs to be done to maintain heap feature
+            int valToReturn = values.getFirst();//initialize the value to return as the first (0-th) value of the list. do not remove it from the list, keep the value.
+            int itemToRemove = values.removeLast();//remove the last value of the list to put as the just removed first value at the list.
+            if(!values.isEmpty()) {//if the list size is grater than 0 this means the last value moved was the only value, so nothing needs to be done to maintain heap feature
                 values.set(0, itemToRemove);//set the recently removed last value at the top of the list
                 int indexToShiftDown = 0;//the first value is at index 0 which needs to be shifted down if needed. so initialize it as 0
-                int leftChildIndex = 2 * indexToShiftDown + 1;//calculate left child index
-                int rightChildIndex = 2 * indexToShiftDown + 2;//calculate right child index
+                int leftChildIndex = 1;//calculate left child index
+                int rightChildIndex = 2;//calculate right child index
                 while (leftChildIndex < values.size()) {//until left child index is less than the length of the list, repeat
-                    int indexToSwap = leftChildIndex;//set swap index as left child index initially
-                    if (rightChildIndex < values.size() && values.get(rightChildIndex) < values.get(leftChildIndex)) {//now check if right child index is within the list length
-                        //it is possible that right child index is outside the list size meaning it does not exist. In that case proceed with left child only
-                        //if right child exists, compare left child and right child; whichever is smaller (because it is a min heap), we have to proceed with that child.
-                        indexToSwap = rightChildIndex;//if right child is smaller set swap index to right child
-                    }
+                    int indexToSwap = getIndexToSwap(leftChildIndex, rightChildIndex);
                     //at this point we have a swap index (it could be right or the left child
                     if (values.get(indexToShiftDown) > values.get(indexToSwap)) {//compare the value at shift down index with the swap index (i.e. parent with the smaller child)
                         //and if swap index value is less than (because it is min heap) the value at shift down index then swap the values at shift down index and swap index
@@ -57,6 +52,16 @@ public class HeapUsingArrayList {
                 }
             }
             return valToReturn;//return the initially stored value to return.
+        }
+
+        private int getIndexToSwap(int leftChildIndex, int rightChildIndex) {
+            int indexToSwap = leftChildIndex; //set swap index as left child index initially
+            if (rightChildIndex < values.size() && values.get(rightChildIndex) < values.get(leftChildIndex)) {//now check if right child index is within the list length
+                //it is possible that right child index is outside the list size meaning it does not exist. In that case proceed with left child only
+                //if right child exists, compare left child and right child; whichever is smaller (because it is a min heap), we have to proceed with that child.
+                indexToSwap = rightChildIndex;//if right child is smaller set swap index to right child
+            }
+            return indexToSwap;
         }
     }
 
