@@ -52,7 +52,7 @@ public class MergeSortWithInversionCount {
 	}
 
 	//O(n log n)
-    static long mergeSortAndIountInversions(int[] arr) {//<-- start method
+    static long mergeSortAndCountInversions(int[] arr) {//<-- start method
     	int[] res = new int[arr.length];
 		long invCount = mergeSort(arr, res, 0, arr.length-1);//<-- call merge sort for the entire array length 0 to length-1
 		System.out.println(Arrays.toString(res));

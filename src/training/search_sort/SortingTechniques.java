@@ -72,9 +72,7 @@ public class SortingTechniques {
             result[resultIndex++] = array[rightIdx++];
         }
 
-        for (int k = l1; k <= r2; k++) {
-            array[k] = result[k];
-        }
+        if (r2 + 1 - l1 >= 0) System.arraycopy(result, l1, array, l1, r2 + 1 - l1);
     }
 
     public static void quickSort(int[] array, int l, int r) {
