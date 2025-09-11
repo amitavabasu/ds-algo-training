@@ -76,26 +76,45 @@ public class AllDFSTreeTraversal {
         return result;
     }
 
-
+    public static int maxWidth(Node node) {
+        int maxWidth = 0;
+        if (node == null) return maxWidth;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(node);
+        int levelWidth = queue.size();
+        while (!queue.isEmpty()) {
+            Node current = queue.remove();
+            if (current.left != null) queue.add(current.left);
+            if (current.right != null) queue.add(current.right);
+            levelWidth--;
+            if (levelWidth == 0) {
+                levelWidth = queue.size();
+                maxWidth = Math.max(maxWidth, levelWidth);
+            }
+        }
+        return maxWidth;
+    }
 
 
 
 
     public static void main(String[] args) {
         Node root = buildTree();
-        System.out.println("Post Order: " + Arrays.toString(postOrder(root, new ArrayList()).toArray()));
         System.out.println("Pre Order: " + Arrays.toString(preOrder(root, new ArrayList()).toArray()));
         System.out.println("In Order: " + Arrays.toString(inOrder(root, new ArrayList<>()).toArray()));
+        System.out.println("Post Order: " + Arrays.toString(postOrder(root, new ArrayList()).toArray()));
         System.out.println("Level Order: " + Arrays.toString(levelOrder(root).toArray()));
+        System.out.println("MaxWidth: " + maxWidth(root));
 
         System.out.println("-------------");
 
         Integer[] treeDataLevelOrder = {9, 4,20, 1,6,15,170, };
         Node rootNode = buildTree(treeDataLevelOrder, 0);
-        System.out.println("Post Order: " + Arrays.toString(postOrder(rootNode, new ArrayList()).toArray()));
         System.out.println("Pre Order: " + Arrays.toString(preOrder(rootNode, new ArrayList()).toArray()));
         System.out.println("In Order: " + Arrays.toString(inOrder(rootNode, new ArrayList<>()).toArray()));
+        System.out.println("Post Order: " + Arrays.toString(postOrder(rootNode, new ArrayList()).toArray()));
         System.out.println("Level Order: " + Arrays.toString(levelOrder(root).toArray()));
+        System.out.println("MaxWidth: " + maxWidth(root));
     }
 
 
