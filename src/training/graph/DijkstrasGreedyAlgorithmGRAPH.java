@@ -79,7 +79,7 @@ public class DijkstrasGreedyAlgorithmGRAPH {
                     }
                 }
             }
-            //System.out.println("Less weighted path found ==>" + lessWeightFound);
+            System.out.println("Less weighted path found ==>" + lessWeightFound);
         }
         return result;
     }
@@ -94,22 +94,22 @@ public class DijkstrasGreedyAlgorithmGRAPH {
             {4, 2, 4},
             {4, 5, 6},
             {3, 2, 3},
-            {5, 3, 7},//Comment this to see unreachable node
+           // {5, 3, 7},//Comment this to see unreachable node
             {3, 1, 5},
         };
 
         ArrayList<List<int[]>> adjList = buildGraph(n, timeToTravel);
-        System.out.println("Dijkstra's Algorithm");
+        System.out.println("Dijkstra's Algorithm, old");
         int[] result = findShortestTimeDijkstra(adjList, n, k);
         for (int i = 0; i < result.length; i++) {
             System.out.println((i+1) + " ==> " + result[i]);
         }
 
-        System.out.println("Bellman-Ford Algorithm");
-        result = findShortestTimeBellmanFord(adjList, n, k);
-        for (int i = 0; i < result.length; i++) {
-            System.out.println((i+1) + " ==> " + result[i]);
-        }
+//        System.out.println("Bellman-Ford Algorithm");
+//        result = findShortestTimeBellmanFord(adjList, n, k);
+//        for (int i = 0; i < result.length; i++) {
+//            System.out.println((i+1) + " ==> " + result[i]);
+//        }
 
         timeToTravel  = new int[][]{
                 {1, 2,  9},
@@ -123,19 +123,19 @@ public class DijkstrasGreedyAlgorithmGRAPH {
         };
 
         adjList = buildGraph(n, timeToTravel);
-        System.out.println("Dijkstra's Algorithm");
+        System.out.println("Dijkstra's Algorithm, old");
             result = findShortestTimeDijkstra(adjList, n, k);
         for (int i = 0; i < result.length; i++) {
             System.out.println((i+1) + " ==> " + result[i]);
         }
 
-        System.out.println("Bellman-Ford Algorithm");
-        result = findShortestTimeBellmanFord(adjList, n, k);
-        for (int i = 0; i < result.length; i++) {
-            System.out.println((i+1) + " ==> " + result[i]);
-        }
+//        System.out.println("Bellman-Ford Algorithm");
+//        result = findShortestTimeBellmanFord(adjList, n, k);
+//        for (int i = 0; i < result.length; i++) {
+//            System.out.println((i+1) + " ==> " + result[i]);
+//        }
 
-        System.out.println("");
+        System.out.println();
     }
 
 }

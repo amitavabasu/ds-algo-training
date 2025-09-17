@@ -40,11 +40,12 @@ public class CountNumberOfNodesInACompleteBinaryTree {
         return root;
     }
 
-    public static Queue<Node> queue = new LinkedList();
+
     public static ArrayList<Integer[]> levelOrder(Node root) {
         if(root == null){
             return new ArrayList<>();
         }
+        Queue<Node> queue = new LinkedList();
         ArrayList<Integer[]> result = new ArrayList<>();
         queue.offer(root);
         int numberOfNodesInLevel = queue.size();
@@ -87,7 +88,7 @@ public class CountNumberOfNodesInACompleteBinaryTree {
         int lIndex = 0, rIndex = maxNumberOfNodesAtLastLevel-1;
         while (lIndex <= rIndex) {
             int mid = (int) Math.ceil((double) (lIndex + rIndex) / 2);
-            boolean exists = findIfExistsInLastLevel(root, mid, 0, (maxNumberOfNodesAtLastLevel-1));
+            boolean exists = findIfExistsInLastLevel(root, mid, 0, maxNumberOfNodesAtLastLevel-1);
             if (exists) {
                 numberOfNodesAtLastLevel = (mid + 1);
                 lIndex = mid + 1;

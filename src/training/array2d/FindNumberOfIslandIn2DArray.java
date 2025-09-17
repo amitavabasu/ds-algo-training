@@ -89,7 +89,7 @@ import java.util.Queue;
                     {0, 1, 0, 1, 0},
                     {1, 0, 1, 0, 1},
                     {0, 1, 1, 1, 0},
-                    {1, 0, 1, 0, 1}
+                    {1, 0, 1, 0, 0}
             };
             System.out.println("Number of island (DFS) ==> " + findNumberOfIslandDFS(data2));
         }

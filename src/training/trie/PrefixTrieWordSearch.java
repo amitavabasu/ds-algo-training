@@ -42,17 +42,17 @@ public class PrefixTrieWordSearch {
         return (current.end);
     }
 
-        public boolean startsWith(String word) {
-            if (word == null || word.length() == 0) return false;
-            TrieNode current = top;
-            for (char c : word.toCharArray()) {
-                TrieNode next = current.map.get(c);
-                if (next == null) {
-                    return false;
-                }
-                current = next;
+    public boolean startsWith(String word) {
+        if (word == null || word.length() == 0) return false;
+        TrieNode current = top;
+        for (char c : word.toCharArray()) {
+            TrieNode next = current.map.get(c);
+            if (next == null) {
+                return false;
             }
-            return true;
+            current = next;
+        }
+        return true;
     }
 
 

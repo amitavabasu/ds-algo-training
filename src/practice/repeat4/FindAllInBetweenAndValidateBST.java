@@ -1,7 +1,5 @@
 package practice.repeat4;
 
-import practice.ValidateBST;
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;

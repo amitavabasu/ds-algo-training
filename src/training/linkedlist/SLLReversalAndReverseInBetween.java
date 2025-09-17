@@ -28,7 +28,7 @@ public class SLLReversalAndReverseInBetween {
             System.out.print(node.value + " ");
             node = node.next;
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public static Node reverse(Node start) {

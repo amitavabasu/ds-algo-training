@@ -31,7 +31,7 @@ public class TimeNeededToInformAllEmployeesGRAPH {
         //We don't need visited array because it is an n-ary tree.
         int maxTime = 0;
         List<Integer> connections = graph.get(vertex);
-        if (connections != null && connections.size() > 0) {
+        if (connections != null) {
             for (Integer connection : connections) {
                 int time = findTimeNeededToInformAll(connection, graph, informTime);
                 if (maxTime < time) {
