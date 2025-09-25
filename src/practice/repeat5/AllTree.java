@@ -76,7 +76,7 @@ public class AllTree {
         return map.values().stream().map( a -> a[1]).collect(Collectors.toList());
     }
 
-    //post-order (left - right - node)
+    //pre - order (node - left - right)
     public static void top(Node node, Map<Integer, Integer[]> map, int index, int level) {
         if (!map.containsKey(index)) {
             map.put(index, new Integer[]{level, node.value});
@@ -137,7 +137,7 @@ public class AllTree {
         return new ArrayList<>(map.values());
     }
 
-    // pre-order (left first) (node - left - right)
+    // pre-order (right first) (node - right - left)
     public static void right(Node node, Map<Integer, Integer> map, int level) {
         if (node != null) {
             if (map.getOrDefault(level, null) == null) {
@@ -148,6 +148,7 @@ public class AllTree {
         }
     }
 
+    //post order (left - right - node
     public static void transpose(Node node) {
         if (node.left != null) transpose(node.left);
         if (node.right != null) transpose(node.right);
