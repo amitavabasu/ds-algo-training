@@ -26,7 +26,8 @@ public class HouseRobber {
     public static void main(String[] args) {
         int[][] arrays = {
                 {1,2,3,1},
-                {2,7,9,3,1}
+                {2,7,9,3,1},
+                {16, 15, 2, 10}
         };
 
         for (int i = 0; i < arrays.length; i++) {

@@ -27,7 +27,7 @@ public class FindSequenceInAGivenArray {
                     }
                 }
             }
-            if (subsequentIndexQueue.size() > 0) {
+            if (!subsequentIndexQueue.isEmpty()) {
                 seqCount++;
                 indexQueue = subsequentIndexQueue;
             }

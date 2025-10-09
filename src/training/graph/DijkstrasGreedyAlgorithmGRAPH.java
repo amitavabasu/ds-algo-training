@@ -85,34 +85,36 @@ public class DijkstrasGreedyAlgorithmGRAPH {
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        int k = 1;
+        int n = 5; // number of nodes
+        int k = 1; // starting node
         int[][] timeToTravel  = {
-            {1, 2, 9},
-            {1, 4, 2},
-            {2, 5, 1},
-            {4, 2, 4},
-            {4, 5, 6},
-            {3, 2, 3},
-           // {5, 3, 7},//Comment this to see unreachable node
-            {3, 1, 5},
+                {1, 2, 9}, // source --> destination, weight/distance; source and destination are items not index;
+                //sourceIndex = source-1 & destinationIndex = destination-1;
+                {1, 4, 2},
+                {2, 5, 1},
+                {4, 2, 4},
+                {4, 5, 6},
+                {3, 2, 3},
+                 {5, 3, 7},//Comment this to see unreachable node
+                {3, 1, 5},
         };
 
         ArrayList<List<int[]>> adjList = buildGraph(n, timeToTravel);
-        System.out.println("Dijkstra's Algorithm, old");
-        int[] result = findShortestTimeDijkstra(adjList, n, k);
-        for (int i = 0; i < result.length; i++) {
-            System.out.println((i+1) + " ==> " + result[i]);
-        }
-
-//        System.out.println("Bellman-Ford Algorithm");
-//        result = findShortestTimeBellmanFord(adjList, n, k);
+//        System.out.println("Dijkstra's Algorithm, old");
+//        int[] result = findShortestTimeDijkstra(adjList, n, k);
 //        for (int i = 0; i < result.length; i++) {
 //            System.out.println((i+1) + " ==> " + result[i]);
 //        }
 
+        System.out.println("Bellman-Ford Algorithm");
+        int[] result = findShortestTimeBellmanFord(adjList, n, k);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println((i+1) + " ==> " + result[i]);
+        }
+
         timeToTravel  = new int[][]{
-                {1, 2,  9},
+                {1, 2, 9}, // source --> destination, weight/distance; source and destination are items not index;
+                //sourceIndex = source-1 & destinationIndex = destination-1;
                 {1, 4,  2},
                 {2, 5, -3},
                 {4, 2, -4},
@@ -123,19 +125,18 @@ public class DijkstrasGreedyAlgorithmGRAPH {
         };
 
         adjList = buildGraph(n, timeToTravel);
-        System.out.println("Dijkstra's Algorithm, old");
-            result = findShortestTimeDijkstra(adjList, n, k);
-        for (int i = 0; i < result.length; i++) {
-            System.out.println((i+1) + " ==> " + result[i]);
-        }
-
-//        System.out.println("Bellman-Ford Algorithm");
-//        result = findShortestTimeBellmanFord(adjList, n, k);
+//        System.out.println("Dijkstra's Algorithm, old");
+//        result = findShortestTimeDijkstra(adjList, n, k);
 //        for (int i = 0; i < result.length; i++) {
 //            System.out.println((i+1) + " ==> " + result[i]);
 //        }
 
+        System.out.println("Bellman-Ford Algorithm");
+        result = findShortestTimeBellmanFord(adjList, n, k);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println((i+1) + " ==> " + result[i]);
+        }
+
         System.out.println();
     }
-
 }

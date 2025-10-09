@@ -52,13 +52,13 @@ public class TopologicalSortGRAPH {
     public static void main(String[] args) {
         int n = 6;
         int[][] prerequisites = {
-                {1,0},
-                {2,1},
-                {2,5}, //exchange to test negative case
-                {0,3},
-                {4,3},
-                {3,5},
-                {4,5}
+                {1,0}, //1 <-- 0
+                {2,1}, //2 <-- 1
+                {2,5}, //2 <-- 5 (exchange to test negative case)
+                {0,3}, //0 <-- 3
+                {4,3}, //4 <-- 3
+                {3,5}, //5 <-- 5
+                {4,5}  //4 <-- 5
         };
 
         ArrayList<List<Integer>> adjList = new ArrayList<>(Collections.nCopies(n,null));
@@ -70,7 +70,7 @@ public class TopologicalSortGRAPH {
         System.out.println(Arrays.toString(inDegree));
 
         System.out.println("Can complete course ==> " + (findCompletable(adjList, inDegree) ? "Yes" : "No"));
-        System.out.println("");
+        System.out.println();
     }
 
 }

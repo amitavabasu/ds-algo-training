@@ -18,7 +18,7 @@ public class FibonacciUsingDP {
     }
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 10;
         System.out.println(fibonacci(n));
     }
 }
