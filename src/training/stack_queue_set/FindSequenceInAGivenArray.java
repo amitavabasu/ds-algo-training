@@ -1,4 +1,4 @@
-package training.stack_queue;
+package training.stack_queue_set;
 
 import java.util.LinkedList;
 import java.util.Queue;
