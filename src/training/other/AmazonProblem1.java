@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class AmazonProblem {
+public class AmazonProblem1 {
 
     public static List<Integer> getLexicographicalSmallestPermutation(int size, int sum) {
         if (size <= 0) return Collections.emptyList();
