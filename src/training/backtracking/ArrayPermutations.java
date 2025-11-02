@@ -33,6 +33,8 @@ public class ArrayPermutations {
         }
     }
 
+
+
     public static void main(String[] args) {
         int[] data = {1,2,3};
         printPermutations(new int[]{}, data);
