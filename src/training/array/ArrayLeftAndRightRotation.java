@@ -2,7 +2,7 @@ package training.array;
 
 import java.util.Arrays;
 
-public class ArrayLeftRotation {
+public class ArrayLeftAndRightRotation {
 
     public static int[] leftRotate(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k <= 0 || nums.length == 1) return nums;//if numbers do not exist and k <= 0 no rotations needed so return same array
@@ -27,10 +27,85 @@ public class ArrayLeftRotation {
         return nums;//Finally return the rotation result.
     }
 
+    public static int[] leftRotateBasedOnGCD(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || nums.length == 1 || k == 0) return nums;
+        int n = nums.length;
+        k = k % n;
+        if (k == 0) return nums;
+        int gcd = gcd(n, k);
+        for (int start = 0; start < gcd; start++) {
+            int temp = nums[start];
+            int current = start;
+            while (true) {
+                int next = (current + k) % n;
+                if (next == start) break;
+                nums[current] = nums[next];
+                current = next;
+            }
+            nums[current] = temp;
+        }
+        return nums;
+    }
+
+    public static int findGcd(int x, int y) {
+        while ( y != 0) {
+            int t = x % y;
+            x = y;
+            y = t;
+        }
+        return x;
+    }
+
+    public static void leftRotate2(int[] a, int k) {
+        int n = a.length;
+        if (n == 0) return;
+        k = k % n;
+        if (k == 0) return;
+
+        int g = gcd(n, k);
+        for (int start = 0; start < g; start++) {
+            int temp = a[start];
+            int cur = start;
+            while (true) {
+                int next = (cur - k + n) % n; // left rotate
+                if (next == start) break;
+                a[cur] = a[next];
+                cur = next;
+            }
+            a[cur] = temp;
+        }
+    }
+
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int t = a % b;
+            a = b;
+            b = t;
+        }
+        return a;
+    }
+
+
     public static void main(String[] args) {
         for (int n = 0; n < 21; n++) {
             int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
             System.out.println(Arrays.toString(leftRotate(a, (n + 1))));
         }
+
+        System.out.println("-----");
+
+        for (int n = 0; n < 21; n++) {
+            int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            System.out.println(Arrays.toString(leftRotateBasedOnGCD(a, (n + 1))));
+        }
+
+        System.out.println("-----");
+
+        for (int n = 0; n < 21; n++) {
+            int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+           leftRotate2(a, (n + 1));
+            System.out.println(Arrays.toString(a));
+        }
+
     }
 }
