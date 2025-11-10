@@ -57,7 +57,7 @@ public class LargetConnectedComponentOverTime_GraphAndSet {
 
         public int find(int x) {
             if (this.parent[x] != x) { //if x is not its own parent
-                // recursively find its parent's parent.
+                // find its parent's parent.
                 // Also update its parent to it's parent's parent
                 //Until a root is found, which means tee parent is same at itself
               parent[x] = find(parent[x]);

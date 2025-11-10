@@ -8,7 +8,7 @@ import java.util.Stack;
 public class KCompression {
 
    public static List<Integer> getKCompressed(List<Integer> list, int k) {
-       if (list == null || list.size() == 0) return list;
+       if (list == null || list.isEmpty()) return list;
        int n = list.size();
        Stack<Integer[]> stack = new Stack<>();
        stack.push(new Integer[]{list.get(0), 1});
@@ -48,16 +48,15 @@ public class KCompression {
 
 
     public static void main(String[] args) {
-        int k = 3;
-        //Integer[] arr = {8, 9, 9, 3, 3, 3, 2, 2};
-        k = 2;
-        Integer[] arr = {16, 8, 4, 2, 2};
-
-        List<Integer> list = getKCompressed(Arrays.asList(arr), k);
-
-        System.out.println(list);
-
-
+        int[] k = {3, 2};
+        Integer[][] arr = {
+                {8, 9, 9, 3, 3, 3, 2, 2},
+                {16, 8, 4, 2, 2}
+        };
+        for (int i = 0; i < arr.length; i++ ) {
+            List<Integer> list = getKCompressed(Arrays.asList(arr[i]), k[i]);
+            System.out.println(list);
+        }
    }
 
 }
