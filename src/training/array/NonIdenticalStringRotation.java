@@ -1,6 +1,6 @@
 package training.array;
 
-public class NonItenticalStringRotation {
+public class NonIdenticalStringRotation {
     /*
         Given two strings s1 and s2, return 1 if s2 is a rotation of s1 but not identical to s1, otherwise return 0.
 

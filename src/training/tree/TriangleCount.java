@@ -1,4 +1,7 @@
 package training.tree;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
 /*
     # Triangle Count
 
@@ -79,35 +82,33 @@ public class TriangleCount {
         root.right.right = new TNode(5);
         return root;
     }
-    public static int count = 0;
-    public static int[]  countTriangleRec(TNode node) {
+    public static int[]  countTriangleRec(TNode node, AtomicInteger count) {
         int[] lrCounts = {0, 0};
         if (node.left != null) {
-            int[] llrCounts = countTriangleRec(node.left);
+            int[] llrCounts = countTriangleRec(node.left, count);
             lrCounts[0] = llrCounts[0] + 1;
         }
         if (node.right != null) {
-            int[] lrrCounts = countTriangleRec(node.right);
+            int[] lrrCounts = countTriangleRec(node.right, count);
             lrCounts[1] = lrrCounts[1] + 1;
         }
         System.out.println(node.val);
-        count = count + Math.min(lrCounts[0], lrCounts[1]);
+        count.set(count.get() + Math.min(lrCounts[0], lrCounts[1]));
         return lrCounts;
     }
 
-    public static int countTriangle(TNode root) {
-        if (root == null || root.left == null || root.right == null) return count;
-        countTriangleRec(root);
-        return count;
+    public static Integer countTriangle(TNode root) {
+        AtomicInteger count = new AtomicInteger(0);
+        if (root == null || root.left == null || root.right == null) return count.get();
+        countTriangleRec(root, count);
+        return count.get();
     }
 
     public static void main(String[] args) {
         TNode tree0 = buildTree0();
         System.out.println("Result ==> " + countTriangle(tree0));
-        count = 0;
         TNode tree1 = buildTree1();
         System.out.println("Result ==> " + countTriangle(tree1));
-        count = 0;
         TNode tree2 = buildTree2();
         System.out.println("Result ==> " + countTriangle(tree2));
     }

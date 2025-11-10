@@ -13,7 +13,7 @@ public class FindDuplicated {
             if (user == null || user.length <= 1) continue;
             String[] ips = Arrays.copyOfRange(user, 1, users.length+1);
             Arrays.sort(ips);
-            String ipString = String.join("", ips);
+            String ipString = String.join(",", ips);
             if (set.contains(ipString)){
                 return true;
             } else {

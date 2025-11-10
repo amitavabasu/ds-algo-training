@@ -49,6 +49,7 @@ public class Permutations {
         List<char[]> result = new ArrayList<>();
         printPermutation(arr, new char[]{}, result);
         for (char[] c : result) {
+
             System.out.println(Arrays.toString(c));
         }
         result.clear();
@@ -57,8 +58,5 @@ public class Permutations {
         for (char[] c : result) {
             System.out.println(Arrays.toString(c));
         }
-
-
-
     }
 }

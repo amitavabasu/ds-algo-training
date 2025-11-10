@@ -51,7 +51,6 @@ Any "g" character at positions 3, 4, or 5 can be deleted to obtain str2. Return 
             return ans;
         }
 
-        // quick demo
         public static void main(String[] args) {
             String str1 = "aaabaaa";
             String str2 = "aabaaa";
